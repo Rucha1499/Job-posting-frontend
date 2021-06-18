@@ -1,5 +1,9 @@
-export default function Home() {
-  return (
-    <h1>Hello world!</h1>
-  );
-}
+import Navbar from '../components/Navbar';
+
+const HomePage = () => (
+  <div>
+    <Navbar logo="/logo.png" title="My Listings" notification="/notification.png" profile="/profile.png" />
+  </div>
+);
+
+export default HomePage;
