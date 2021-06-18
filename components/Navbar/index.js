@@ -10,7 +10,7 @@ const Navbar = ({
         src={logo}
         alt="Logo"
         width={120}
-        height={40}
+        height={30}
       />
     </div>
     <div className={styles.rightContent}>
