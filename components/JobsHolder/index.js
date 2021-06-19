@@ -1,41 +1,22 @@
-import { useState } from 'react';
 import JobCard from '../JobCard';
-import Modal from '../Modal/modal';
-import JobModalOne from '../JobModalOne';
 import styles from './JobsHolder.module.css';
 
-const JobsHolder = ({ data }) => {
-  const [showModal, setShowModal] = useState(false);
-
-  const toggleModalHandler = () => {
-    setShowModal((prevState) => !prevState);
-  };
-
-  return (
-    <div className={styles.mainContaier}>
-      {showModal ? (
-        <Modal>
-          <JobModalOne />
-        </Modal>
-      ) : (
-        <div className={styles.jobContainer}>
-          <div className={styles.addNewJob}>
-            <button type="button" onClick={toggleModalHandler} className={styles.button}>+ Add another job</button>
-          </div>
-          <div className={styles.jobs}>
-            {data.map((job) => {
-              const { id, jobTitle, date } = job;
-              return (
-                <div className={styles.jobDisplay}>
-                  <JobCard key={id} jobTitle={jobTitle} date={date} />
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      ) }
+const JobsHolder = ({ data }) => (
+  <div className={styles.mainContainer}>
+    <div className={styles.addNewJob}>
+      <button type="button" className={styles.button}>+ Add another job</button>
     </div>
-  );
-};
+    <div className={styles.jobs}>
+      {data.map((job) => {
+        const { id, jobTitle, date } = job;
+        return (
+          <div className={styles.jobDisplay}>
+            <JobCard key={id} jobTitle={jobTitle} date={date} />
+          </div>
+        );
+      })}
+    </div>
+  </div>
+);
 
 export default JobsHolder;
