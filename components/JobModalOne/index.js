@@ -11,6 +11,9 @@ const JobModalOne = () => (
         <input type="text" placeholder="Enter the job location" />
         <input type="checkbox" placeholder="This job is remote" />
       </div>
+      <div className={styles.button}>
+        <button type="button">Next</button>
+      </div>
     </div>
   </div>
 );

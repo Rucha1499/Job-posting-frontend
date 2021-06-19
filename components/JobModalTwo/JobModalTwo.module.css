@@ -1,0 +1,34 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin:10% 25%;
+    height: auto;
+    border: 1px solid black;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+.backArrow {
+    padding: 10px;
+    float: left;
+}
+
+.tilte {
+    padding: 20px;
+}
+
+.skill, .mode, .stipendRange, .duration {
+    display: flex;
+    flex-direction: row;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+}
