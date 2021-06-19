@@ -1,12 +1,12 @@
 // import JobModalOne from '../components/JobModalOne';
-import JobModalTwo from '../components/JobModalTwo';
+import JobModalOne from '../components/JobModalOne';
 
 const Test = () => (
   <div>
     testing
     <div>
       {/* <JobModalOne /> */}
-      <JobModalTwo />
+      <JobModalOne />
     </div>
   </div>
 );

@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import styles from './JobModalTwo.module.css';
 
-const JobModalTwo = () => (
+const JobModalTwo = ({ toggleDetails }) => (
   <div className={styles.mainContainer}>
     <div className={styles.header}>
-      <div className={styles.backArrow}>
+      <div className={styles.backArrow} role="button" tabIndex={0} onKeyDown={() => toggleDetails((prevState) => !prevState)} onClick={() => toggleDetails((prevState) => !prevState)}>
         <Image
           src="/backArrow.png"
           alt="back arrow"
