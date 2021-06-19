@@ -1,10 +1,10 @@
 import JobCard from '../JobCard';
-import styles from './jobsHolder.module.css';
+import styles from './JobsHolder.module.css';
 
 const JobsHolder = ({ data }) => (
   <div className={styles.mainContainer}>
     <div className={styles.addNewJob}>
-      <p>+ Add another job</p>
+      <button type="button" className={styles.button}>+ Add another job</button>
     </div>
     <div className={styles.jobs}>
       {data.map((job) => {
