@@ -10,17 +10,29 @@ const JobModalOne = () => {
       {jobModalTwo ? (
         <JobModalTwo toggleDetails={setJobModalTwo} />
       ) : (
-        <div className={styles.jobTitle}>
-          <p>Job Title</p>
-          <div className={styles.input}>
-            <input type="text" placeholder="Enter the job title" />
+        <div>
+          <div className={styles.jobDetails}>
+            <div className={styles.title}>
+              <label className={styles.label} htmlFor="job-title">
+                Job Title
+                <input className={styles.input} type="text" id="job-title" name="job-title" placeholder="Enter the job location" />
+              </label>
+            </div>
+            <div className={styles.location}>
+              <label className={styles.label} htmlFor="job-location">
+                Job Location
+                <input className={styles.input} type="text" id="job-location" name="job-location" placeholder="Enter the job location" />
+              </label>
+            </div>
           </div>
-          <div className={styles.input}>
-            <input type="text" placeholder="Enter the job location" />
-            <input type="checkbox" placeholder="This job is remote" />
+          <div className={styles.checkbox}>
+            <label className={styles.label} htmlFor="job-remote">
+              <input className={styles.input} type="checkbox" id="job-remote" name="job-remote" />
+              This job is remote
+            </label>
           </div>
           <div className={styles.button}>
-            <button type="button" onClick={() => setJobModalTwo((prevState) => !prevState)}>Next</button>
+            <button className={styles.button} type="button" onClick={() => setJobModalTwo((prevState) => !prevState)}>NEXT</button>
           </div>
         </div>
       )}

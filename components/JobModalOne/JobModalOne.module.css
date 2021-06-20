@@ -1,7 +1,47 @@
 .mainContainer {
     display: flex;
-    width: 50%;
-    margin:10% 25%;
-    height: 250px;
-    border: 1px solid black;
+    height: auto;
+    flex-direction: row;
+    width: 60%;
+    margin:10% 20%;
+    height: auto;
 }
+
+.jobDetails {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.title, .location, .checkbox {
+    padding: 10px;
+   
+}
+
+.label{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.input {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+
+.button {
+    float:right;
+    background-color: #4BABE1;
+    height: 40px;
+    width: 120px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: bold;
+    border: transparent;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
