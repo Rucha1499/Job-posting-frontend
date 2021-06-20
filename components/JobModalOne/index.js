@@ -15,7 +15,7 @@ const JobModalOne = () => {
             <div className={styles.title}>
               <label className={styles.label} htmlFor="job-title">
                 Job Title
-                <input className={styles.input} type="text" id="job-title" name="job-title" placeholder="Enter the job location" />
+                <input className={styles.input} type="text" id="job-title" name="job-title" placeholder="Enter the job title" />
               </label>
             </div>
             <div className={styles.location}>

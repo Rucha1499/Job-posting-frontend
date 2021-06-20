@@ -13,7 +13,11 @@
 
 .backArrow {
     padding: 10px;
-    float: left;
+}
+
+.skillInput {
+    display:flex ;
+    margin-left: auto;
 }
 
 .tilte {
@@ -23,9 +27,21 @@
 .skill, .mode, .stipendRange, .duration {
     display: flex;
     flex-direction: row;
+    padding: 20px;
 }
 
 .description {
     display: flex;
     flex-direction: column;
+    padding: 20px;
+}
+
+.input {
+    overflow-y: scroll;
+    height:100px;
+}
+
+.modeCardHolder {
+    display: flex;
+    flex-direction: row;
 }

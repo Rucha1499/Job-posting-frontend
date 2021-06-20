@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styles from './JobModalTwo.module.css';
+import ModeCard from '../ModeCard/modeCard';
 
 const JobModalTwo = ({ toggleDetails }) => (
   <div className={styles.mainContainer}>
@@ -15,17 +16,19 @@ const JobModalTwo = ({ toggleDetails }) => (
       <p className={styles.title}># Intern Details</p>
     </div>
     <div className={styles.skill}>
-      <p>Skills</p>
-      <input type="text" placeholder="start typing and enter tab" />
+      <p className={styles.subTitle}>Skills</p>
+      <input className={styles.skillInput} type="text" placeholder="start typing and enter tab" />
     </div>
     <div className={styles.mode}>
-      <p>Mode</p>
-      <input type="checkbox" />
-      <input type="checkbox" />
-      <input type="checkbox" />
+      <p className={styles.subTitle}>Mode</p>
+      <div className={styles.modeCardHolder}>
+        <ModeCard modeType="Part-time" duration="20 hrs/week" />
+        <ModeCard modeType="Semi Full-time" duration="30 hrs/week" />
+        <ModeCard modeType="Full-time" duration="40 hrs/week" />
+      </div>
     </div>
     <div className={styles.stipendRange}>
-      <p>Stipend Range</p>
+      <p className={styles.subTitle}>Stipend Range</p>
       <input type="number" placeholder="lower limit" />
       <input type="number" placeholder="Upper limit" />
     </div>
@@ -38,7 +41,7 @@ const JobModalTwo = ({ toggleDetails }) => (
     </div>
     <div className={styles.description}>
       <p>Job Description</p>
-      <input type="text" placeholder="Description of job" />
+      <textarea className={styles.input} type="text" placeholder="Description of job" />
     </div>
     <div className={styles.button}>
       <button type="submit">Post</button>

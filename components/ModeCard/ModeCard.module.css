@@ -1,0 +1,11 @@
+.maincontainer {
+    display: flex;
+    flex-direction: row;
+    height:40px;
+    width: 140px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+}
