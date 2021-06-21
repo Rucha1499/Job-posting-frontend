@@ -1,15 +1,21 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import Image from 'next/image';
+import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
+import { formContext } from '../../state/contextProvider';
 import styles from './JobModalTwo.module.css';
 
 const JobModalTwo = ({ toggleDetails }) => {
+  const { dispatch, formState } = useContext(formContext);
+
   const {
     register,
     handleSubmit,
   } = useForm();
 
+  console.log('formasdfsaf', formState);
   const onSubmit = (data) => {
+    dispatch({ type: 'UPDATE', payload: data });
     alert(JSON.stringify(data));
   };
 
