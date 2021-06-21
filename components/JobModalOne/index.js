@@ -6,6 +6,7 @@ import JobModalTwo from '../JobModalTwo';
 const JobModalOne = () => {
   const { dispatch, formState } = useContext(formContext);
 
+  // eslint-disable-next-line no-console
   console.log('form', formState);
   const { jobLocationContext, jobTitleContext } = formState;
   const [jobModalTwo, setJobModalTwo] = useState(false);
