@@ -5,8 +5,7 @@
     },
     "extends": [
         "plugin:react/recommended",
-        "airbnb",
-        "next"
+        "airbnb"
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -34,9 +33,7 @@
         "react/jsx-props-no-spreading": "off",
         "react/prop-types": "off",
         "no-shadow": "off",
-        "no-alert": "off",
-        "react/no-unescaped-entities": "off",
-        "@next/next/no-page-custom-font": "off"
+        "no-alert": "off"
     }
 }
 
