@@ -1,7 +1,7 @@
 import { useState, useContext } from 'react';
 import { formContext } from '../../state/contextProvider';
-import styles from './JobModalOne.module.css';
-import JobModalTwo from '../JobModalTwo';
+import styles from './PrimaryJobDetails.module.css';
+import JobModalTwo from '../secondaryJobDetails';
 
 const JobModalOne = () => {
   const { dispatch, formState } = useContext(formContext);
@@ -10,9 +10,10 @@ const JobModalOne = () => {
   const [jobModalTwo, setJobModalTwo] = useState(false);
   const [jobTitle, setJobTitle] = useState(jobTitleContext);
   const [jobLocation, setJobLocation] = useState(jobLocationContext);
+  const [isRemote, setIsRemote] = useState(false);
 
   const addToFormContext = () => {
-    const currentFormData = { jobTitle, jobLocation };
+    const currentFormData = { jobTitle, jobLocation, isRemote };
     dispatch({ type: 'UPDATE', payload: currentFormData });
   };
 
@@ -66,7 +67,9 @@ const JobModalOne = () => {
                 className={styles.input}
                 type="checkbox"
                 id="job-remote"
+                value={isRemote}
                 name="job-remote"
+                onChange={(e) => setIsRemote(e.target.value)}
               />
               This job is remote
             </label>

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { formContext } from '../../state/contextProvider';
-import styles from './JobModalTwo.module.css';
+import styles from './SecondaryJobDetails.module.css';
 import BASE_URL from '../../constants';
 
 const JobModalTwo = ({ toggleDetails }) => {
@@ -36,6 +36,7 @@ const JobModalTwo = ({ toggleDetails }) => {
 
   const onSubmit = (data) => {
     dispatch({ type: 'UPDATE', payload: data });
+    console.log('rucha', data);
     createJob();
   };
 
