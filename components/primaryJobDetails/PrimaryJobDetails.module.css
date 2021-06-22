@@ -2,18 +2,20 @@
     display: flex;
     height: auto;
     flex-direction: row;
-    width: 60%;
-    margin:10% 20%;
+    width: auto;
     height: auto;
 }
 
 .jobDetails {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 10px;
+    padding-top: 20px;
+
 }
 
-.title, .location, .checkbox {
+.title, .location{
+    display: flex;
     padding: 10px;
    
 }
@@ -21,15 +23,33 @@
 .label{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    align-items: center;
+    padding: 5px 30px;
+    margin: 5px;
 }
 
 .input {
    margin-left: auto;
+   height: 40px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: medium;
+    margin: 0px 5px;
+}
+
+.jobTitleInput {
+    margin-left: auto;
+    border: transparent;
+    border-bottom: 1px solid #090540;
 }
 
 
 .button {
+    margin: 10px;
     float:right;
     background-color: #4BABE1;
     height: 40px;
@@ -42,4 +62,10 @@
     color: white;
     cursor: pointer;
 }
+
+.locationDetails {
+    display: flex;
+    flex-direction: column;
+}
+
 

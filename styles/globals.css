@@ -2,8 +2,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
+  color:#090540;
+  font-size: large;
 }
 
 a {
@@ -18,5 +19,9 @@ a {
 p {
   margin: 0px;
   padding: 0px;
+}
+
+input {
+  padding: 5px;
 }
 

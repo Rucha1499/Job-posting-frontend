@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import { useState, useContext } from 'react';
 import { formContext } from '../../state/contextProvider';
 import styles from './PrimaryJobDetails.module.css';
@@ -33,21 +34,23 @@ const JobModalOne = () => {
             <div className={styles.title}>
               <label className={styles.label} htmlFor="job-title">
                 Job Title
-                <input
-                  className={styles.input}
-                  type="text"
-                  id="job-title"
-                  value={jobTitle}
-                  name="job-title"
-                  placeholder="Enter the job title"
-                  onChange={(e) => setJobTitle(e.target.value)}
-                  required
-                />
               </label>
+              <input
+                className={styles.jobTitleInput}
+                type="text"
+                id="job-title"
+                value={jobTitle}
+                name="job-title"
+                placeholder="Enter the job title"
+                onChange={(e) => setJobTitle(e.target.value)}
+                required
+              />
             </div>
-            <div className={styles.location}>
-              <label className={styles.label} htmlFor="job-location">
-                Job Location
+            <div className={styles.locationDetails}>
+              <div className={styles.location}>
+                <label className={styles.label} htmlFor="job-location">
+                  Job Location
+                </label>
                 <input
                   className={styles.input}
                   type="text"
@@ -58,21 +61,21 @@ const JobModalOne = () => {
                   onChange={(e) => setJobLocation(e.target.value)}
                   required
                 />
-              </label>
+              </div>
+              <div className={styles.checkbox}>
+                <label className={styles.label} htmlFor="job-remote">
+                  <input
+                    className={styles.remote}
+                    type="checkbox"
+                    id="job-remote"
+                    value={isRemote}
+                    name="job-remote"
+                    onChange={(e) => setIsRemote(e.target.value)}
+                  />
+                  This job is remote
+                </label>
+              </div>
             </div>
-          </div>
-          <div className={styles.checkbox}>
-            <label className={styles.label} htmlFor="job-remote">
-              <input
-                className={styles.input}
-                type="checkbox"
-                id="job-remote"
-                value={isRemote}
-                name="job-remote"
-                onChange={(e) => setIsRemote(e.target.value)}
-              />
-              This job is remote
-            </label>
           </div>
           <button
             className={styles.button}

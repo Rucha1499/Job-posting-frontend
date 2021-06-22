@@ -14,7 +14,7 @@ const Navbar = ({
       />
     </div>
     <div className={styles.rightContent}>
-      <h3>{title}</h3>
+      <h3 className={styles.title}>{title}</h3>
       <div className={styles.notification}>
         <Image
           src={notification}
