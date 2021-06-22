@@ -1,3 +1,3 @@
-const BASE_API_URL = 'http://localhost:8000';
+const BASE_API_URL = 'https://job-posting-application.herokuapp.com';
 
 export default BASE_API_URL;

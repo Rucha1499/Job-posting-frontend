@@ -12,7 +12,7 @@ const JobsHolder = ({ data }) => {
   };
 
   return (
-    <div className={styles.mainContaier}>
+    <div className={styles.mainContainer}>
       {showModal ? (
         <Modal>
           <JobModalOne />
@@ -26,7 +26,7 @@ const JobsHolder = ({ data }) => {
             {data.map((job) => {
               const { id, jobTitle, date } = job;
               return (
-                <JobCard key={id} jobTitle={jobTitle} date={date} />
+                <JobCard key={id} data={job} jobTitle={jobTitle} date={date} />
               );
             })}
           </div>

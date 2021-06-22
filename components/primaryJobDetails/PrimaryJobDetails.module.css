@@ -1,9 +1,7 @@
 .mainContainer {
     display: flex;
     height: auto;
-    flex-direction: row;
     width: auto;
-    height: auto;
 }
 
 .jobDetails {

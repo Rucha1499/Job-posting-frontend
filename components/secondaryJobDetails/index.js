@@ -14,15 +14,13 @@ const JobModalTwo = ({ toggleDetails }) => {
     handleSubmit,
   } = useForm();
 
-  console.log('final body', formState);
-
-  const createJob = () => {
+  const createJob = (body) => {
     fetch(`${BASE_URL}/createJob`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
       },
-      body: JSON.stringify(formState),
+      body: JSON.stringify(body),
     })
       .then((response) => {
         if (response.status === 200) {
@@ -30,14 +28,16 @@ const JobModalTwo = ({ toggleDetails }) => {
         }
         throw new Error(response.statusText);
       })
-      .then((data) => alert(`Job posted ${data}`))
+      .then((data) => alert(`Job ${data.jobitle} posted!`))
       .catch((err) => { alert(err.message); });
   };
 
   const onSubmit = (data) => {
     dispatch({ type: 'UPDATE', payload: data });
-    console.log('rucha', data);
-    createJob();
+
+    const body = { ...formState, ...data };
+
+    createJob(body);
   };
 
   return (
@@ -78,8 +78,8 @@ const JobModalTwo = ({ toggleDetails }) => {
         <div className={styles.stipendRange}>
           <label>Stipend Range</label>
           <div className={styles.stipend}>
-            <input className={styles.stipendMin} placeholder="Minimum stipend" type="number" {...register('minStipend', { required: true })} />
-            <input className={styles.stipendMax} placeholder="Maximum stipend" type="number" {...register('maxStipend', { required: true })} />
+            <input className={styles.stipendMin} placeholder="Minimum stipend" min="0" type="number" {...register('minStipend', { required: true })} />
+            <input className={styles.stipendMax} placeholder="Maximum stipend" min="0" type="number" {...register('maxStipend', { required: true })} />
           </div>
         </div>
         <div className={styles.duration}>
@@ -92,7 +92,7 @@ const JobModalTwo = ({ toggleDetails }) => {
           <label>
             Duration
           </label>
-          <input className={styles.month} ntype="number" {...register('jobDuration', { required: true })} />
+          <input className={styles.month} min="1" max="12" type="number" {...register('jobDuration', { required: true })} />
           <label>
             Months
           </label>

@@ -15,6 +15,9 @@ const JobModalOne = () => {
 
   const addToFormContext = () => {
     const currentFormData = { jobTitle, jobLocation, isRemote };
+    if (!currentFormData.jobLocation) {
+      delete currentFormData.jobLocation;
+    }
     dispatch({ type: 'UPDATE', payload: currentFormData });
   };
 
@@ -26,6 +29,7 @@ const JobModalOne = () => {
 
   return (
     <div className={styles.mainContainer}>
+
       {jobModalTwo ? (
         <JobModalTwo toggleDetails={setJobModalTwo} />
       ) : (
@@ -60,6 +64,7 @@ const JobModalOne = () => {
                   placeholder="Enter the job location"
                   onChange={(e) => setJobLocation(e.target.value)}
                   required
+                  disabled={isRemote}
                 />
               </div>
               <div className={styles.checkbox}>
@@ -70,7 +75,7 @@ const JobModalOne = () => {
                     id="job-remote"
                     value={isRemote}
                     name="job-remote"
-                    onChange={(e) => setIsRemote(e.target.value)}
+                    onChange={() => setIsRemote((prevState) => !(prevState))}
                   />
                   This job is remote
                 </label>
