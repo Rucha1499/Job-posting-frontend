@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import JobCard from '../JobCard';
-import styles from './JobsHolder.module.css';
 import Modal from '../Modal/modal';
 import JobModalOne from '../primaryJobDetails';
+import styles from './JobsHolder.module.css';
 
 const JobsHolder = ({ data }) => {
   const [showModal, setShowModal] = useState(false);
