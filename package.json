@@ -27,5 +27,8 @@
   },
   "pre-commit": [
     "lint"
-  ]
+  ],
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
+  }
 }
