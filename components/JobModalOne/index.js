@@ -6,8 +6,6 @@ import JobModalTwo from '../JobModalTwo';
 const JobModalOne = () => {
   const { dispatch, formState } = useContext(formContext);
 
-  // eslint-disable-next-line no-console
-  console.log('form', formState);
   const { jobLocationContext, jobTitleContext } = formState;
   const [jobModalTwo, setJobModalTwo] = useState(false);
   const [jobTitle, setJobTitle] = useState(jobTitleContext);
@@ -42,6 +40,7 @@ const JobModalOne = () => {
                   name="job-title"
                   placeholder="Enter the job title"
                   onChange={(e) => setJobTitle(e.target.value)}
+                  required
                 />
               </label>
             </div>
@@ -56,6 +55,7 @@ const JobModalOne = () => {
                   name="job-location"
                   placeholder="Enter the job location"
                   onChange={(e) => setJobLocation(e.target.value)}
+                  required
                 />
               </label>
             </div>
