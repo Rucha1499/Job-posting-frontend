@@ -1,4 +1,4 @@
-import styles from './modal.module.css';
+import styles from './Modal.module.css';
 
 const Modal = ({ children }) => (
   <div className={styles.modalContainer}>

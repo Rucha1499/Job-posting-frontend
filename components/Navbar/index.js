@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from './navbar.module.css';
+import styles from './Navbar.module.css';
 
 const Navbar = ({
   logo, title, notification, profile,

@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { useState, useContext } from 'react';
 import { formContext } from '../../state/contextProvider';
-import styles from './primaryJobDetails.module.css';
+import styles from './JobModalOne.module.css';
 import JobModalTwo from '../secondaryJobDetails';
 
 const JobModalOne = () => {

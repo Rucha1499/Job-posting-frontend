@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { formContext } from '../../state/contextProvider';
-import styles from './secondaryJobDetails.module.css';
+import styles from './JobModalTwo.module.css';
 import BASE_URL from '../../constants';
 
 const JobModalTwo = ({ toggleDetails }) => {

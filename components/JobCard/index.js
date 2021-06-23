@@ -1,4 +1,4 @@
-import styles from './jobcard.module.css';
+import styles from './Jobcard.module.css';
 
 const JobCard = ({ jobTitle, date }) => {
   const newDate = new Date(date);

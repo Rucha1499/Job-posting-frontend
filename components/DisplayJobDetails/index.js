@@ -1,4 +1,4 @@
-import styles from './displayJobDetails.module.css';
+import styles from './DisplayJobDetails.module.css';
 
 const DisplayJobDetails = (data) => {
   const {
