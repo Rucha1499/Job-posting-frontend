@@ -2,9 +2,9 @@
 import Image from 'next/image';
 import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
-import { formContext } from '../../state/contextProvider';
+import { formContext } from '../state/contextProvider';
 import styles from './SecondaryJobDetails.module.css';
-import BASE_URL from '../../constants';
+import BASE_URL from '../constants';
 
 const SecondaryJobDetails = ({ toggleDetails }) => {
   const { dispatch, formState } = useContext(formContext);

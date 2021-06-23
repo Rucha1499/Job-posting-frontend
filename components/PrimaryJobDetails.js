@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { useState, useContext } from 'react';
-import { formContext } from '../../state/contextProvider';
+import { formContext } from '../state/contextProvider';
 import styles from './PrimaryJobDetails.module.css';
-import SecondaryJobDetails from '../secondaryJobDetails/SecondaryJobDetails';
+import SecondaryJobDetails from './SecondaryJobDetails';
 
 const PrimaryJobDetails = () => {
   const { dispatch, formState } = useContext(formContext);

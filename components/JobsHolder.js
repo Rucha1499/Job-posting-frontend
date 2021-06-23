@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import JobCard from '../JobCard/JobCard';
-import Modal from '../Modal/Modal';
-import JobModalOne from '../primaryJobDetails/PrimaryJobDetails';
+import JobCard from './JobCard';
+import Modal from './Modal';
+import PrimaryJobDetails from './PrimaryJobDetails';
 import styles from './JobsHolder.module.css';
 
 const JobsHolder = ({ data }) => {
@@ -15,7 +15,7 @@ const JobsHolder = ({ data }) => {
     <div className={styles.mainContainer}>
       {showModal ? (
         <Modal>
-          <JobModalOne />
+          <PrimaryJobDetails />
         </Modal>
       ) : (
         <div className={styles.jobContainer}>

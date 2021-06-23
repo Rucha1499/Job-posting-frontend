@@ -1,6 +1,6 @@
 import FormContextProvider from '../state/contextProvider';
-import Navbar from '../components/Navbar/Navbar';
-import JobHolder from '../components/JobsHolder/JobsHolder';
+import Navbar from '../components/Navbar';
+import JobHolder from '../components/JobsHolder';
 import styles from '../styles/Home.module.css';
 import BASE_API_URL from '../constants';
 
