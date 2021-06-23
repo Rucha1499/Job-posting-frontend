@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import JobCard from '../JobCard';
-import Modal from '../Modal/modal';
-import JobModalOne from '../primaryJobDetails';
+import JobCard from '../JobCard/JobCard';
+import Modal from '../Modal/Modal';
+import JobModalOne from '../primaryJobDetails/PrimaryJobDetails';
 import styles from './JobsHolder.module.css';
 
 const JobsHolder = ({ data }) => {

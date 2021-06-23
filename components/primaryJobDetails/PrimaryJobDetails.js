@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { useState, useContext } from 'react';
 import { formContext } from '../../state/contextProvider';
-import styles from './JobModalOne.module.css';
-import JobModalTwo from '../secondaryJobDetails';
+import styles from './PrimaryJobDetails.module.css';
+import SecondaryJobDetails from '../secondaryJobDetails/SecondaryJobDetails';
 
-const JobModalOne = () => {
+const PrimaryJobDetails = () => {
   const { dispatch, formState } = useContext(formContext);
 
   const { jobLocationContext, jobTitleContext } = formState;
@@ -31,7 +31,7 @@ const JobModalOne = () => {
     <div className={styles.mainContainer}>
 
       {jobModalTwo ? (
-        <JobModalTwo toggleDetails={setJobModalTwo} />
+        <SecondaryJobDetails toggleDetails={setJobModalTwo} />
       ) : (
         <form>
           <div className={styles.jobDetails}>
@@ -95,4 +95,4 @@ const JobModalOne = () => {
   );
 };
 
-export default JobModalOne;
+export default PrimaryJobDetails;

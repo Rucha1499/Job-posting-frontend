@@ -3,10 +3,10 @@ import Image from 'next/image';
 import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { formContext } from '../../state/contextProvider';
-import styles from './JobModalTwo.module.css';
+import styles from './SecondaryJobDetails.module.css';
 import BASE_URL from '../../constants';
 
-const JobModalTwo = ({ toggleDetails }) => {
+const SecondaryJobDetails = ({ toggleDetails }) => {
   const { dispatch, formState } = useContext(formContext);
 
   const {
@@ -111,4 +111,4 @@ const JobModalTwo = ({ toggleDetails }) => {
   );
 };
 
-export default JobModalTwo;
+export default SecondaryJobDetails;
