@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { formContext } from '../../state/contextProvider';
-import styles from './SecondaryJobDetails.module.css';
+import styles from './secondaryJobDetails.module.css';
 import BASE_URL from '../../constants';
 
 const JobModalTwo = ({ toggleDetails }) => {
@@ -28,7 +28,8 @@ const JobModalTwo = ({ toggleDetails }) => {
         }
         throw new Error(response.statusText);
       })
-      .then((data) => alert(`Job ${data.jobitle} posted!`))
+      // eslint-disable-next-line no-unused-vars
+      .then((data) => alert('Job posted!'))
       .catch((err) => { alert(err.message); });
   };
 
