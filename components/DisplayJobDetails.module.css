@@ -1,42 +1,51 @@
 .mainContainer {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width:50%;
     margin:10% 25%;
+    padding:20px;
     height: auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
 }
 
+.title {
+    padding: 20px;
+    color: #4BABE1;
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+    font-weight: bold;
+}
+
 .jobTitle {
+    padding: 10px;
 
 }
 
 .jobLocation {
-
+    padding: 10px;
 }
 
 .skills {
-
+    padding: 10px;
 }
 
 .jobDescription {
-
+    padding: 10px;
 }
 
 .mode {
-
+    padding: 10px;
 }
 
 .startDate {
-
+    padding: 10px;
 }
 
 .jobDuration {
-
+    padding: 10px;
 }
 
 .stipend {
-
+    padding: 10px;
 }

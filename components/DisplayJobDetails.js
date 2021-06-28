@@ -14,48 +14,58 @@ const DisplayJobDetails = ({
   maxStipend,
   jobDescription,
 }) => (
-  <div className={styles.mainContainer}>
-    <div className={styles.jobTitle}>
+  <p className={styles.mainContainer}>
+    <p className={styles.title}>
+      JOB DETAILS
+    </p>
+    <p className={styles.jobTitle}>
       Job title :
       {' '}
       {jobTitle}
-    </div>
-    <div className={styles.jobLocation}>
+    </p>
+    <p className={styles.jobLocation}>
+      Job Location :
+      {' '}
       {isRemote ? 'Remote Job' : jobLocation }
-    </div>
-    <div className={styles.skills}>
-      Skill required :
+    </p>
+    <p className={styles.skills}>
+      Skills :
       {' '}
       {skills}
-    </div>
-    <div className={styles.jobDescription}>
+    </p>
+    <p className={styles.jobDescription}>
+      Job Description :
+      {' '}
       {jobDescription}
-    </div>
-    <div className={styles.mode}>
+    </p>
+    <p className={styles.mode}>
       Available modes :
+      {' '}
       {fullTime && 'Full-time'}
       {semiFullTime && 'Semi Full-time'}
       {partTime && 'Part-time'}
-    </div>
-    <div className={styles.startDate}>
-      Start from
+    </p>
+    <p className={styles.startDate}>
+      Start from :
       {' '}
       {startDate}
-    </div>
-    <div className={styles.jobDuration}>
+    </p>
+    <p className={styles.jobDuration}>
       Duration :
       {' '}
       {jobDuration}
-    </div>
-    <div className={styles.stipend}>
-      Stipend :
+      {' '}
+      Months
+    </p>
+    <p className={styles.stipend}>
+      Stipend : Rs
       {' '}
       {minStipend}
       {' '}
       -
       {maxStipend}
-    </div>
-  </div>
+    </p>
+  </p>
 );
 
 export default DisplayJobDetails;
