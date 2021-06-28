@@ -1,4 +1,5 @@
 import DisplayJobDetails from '../../components/DisplayJobDetails';
+import Navbar from '../../components/Navbar';
 import BASE_API_URL from '../../constants';
 
 export const getServerSideProps = async (context) => {
@@ -33,6 +34,7 @@ const JobDetails = (data) => {
 
   return (
     <div>
+      <Navbar title="My Listings" notification="/notification.png" profile="/profile.png" />
       <DisplayJobDetails
         jobTitle={jobTitle}
         jobLocation={jobLocation}

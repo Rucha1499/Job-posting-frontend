@@ -2,17 +2,9 @@ import Image from 'next/image';
 import styles from './Navbar.module.css';
 
 const Navbar = ({
-  logo, title, notification, profile,
+  title, notification, profile,
 }) => (
   <div className={styles.navbarContainer}>
-    <div className={styles.logo}>
-      <Image
-        src={logo}
-        alt="Logo"
-        width={120}
-        height={30}
-      />
-    </div>
     <div className={styles.rightContent}>
       <h3 className={styles.title}>{title}</h3>
       <div className={styles.notification}>
