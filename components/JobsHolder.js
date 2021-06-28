@@ -26,7 +26,7 @@ const JobsHolder = ({ data }) => {
             {data.map((job) => {
               const { id, jobTitle, date } = job;
               return (
-                <JobCard key={id} data={job} jobTitle={jobTitle} date={date} />
+                <JobCard key={id} id={id} jobTitle={jobTitle} date={date} />
               );
             })}
           </div>

@@ -8,7 +8,9 @@ export const getServerSideProps = async () => {
   const response = await fetch(`${BASE_API_URL}`);
   const data = await response.json();
 
-  return { props: { data } };
+  return {
+    props: { data },
+  };
 };
 
 const HomePage = ({ data }) => (
