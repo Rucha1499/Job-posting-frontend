@@ -38,3 +38,9 @@
     padding:0px 20px;
     margin-top:2px;
 }
+
+@media only screen and (max-device-width: 500px){
+    .navbarContainer {
+        height: 75px;
+    }
+}

@@ -82,13 +82,15 @@ const PrimaryJobDetails = () => {
               </div>
             </div>
           </div>
-          <button
-            className={styles.button}
-            type="submit"
-            onClick={handleSubmit}
-          >
-            NEXT
-          </button>
+          <div className={styles.submitButton}>
+            <button
+              className={styles.button}
+              type="submit"
+              onClick={handleSubmit}
+            >
+              NEXT
+            </button>
+          </div>
         </form>
       )}
     </div>

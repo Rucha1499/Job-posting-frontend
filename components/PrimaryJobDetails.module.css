@@ -1,7 +1,7 @@
 .mainContainer {
     display: flex;
-    height: auto;
-    width: auto;
+    align-items: center;
+    justify-self: center;
 }
 
 .jobDetails {
@@ -15,12 +15,10 @@
 .title, .location{
     display: flex;
     padding: 10px;
-   
 }
 
 .label{
     display: flex;
-    flex-direction: row;
     align-items: center;
     padding: 5px 30px;
     margin: 5px;
@@ -45,10 +43,16 @@
     border-bottom: 1px solid #090540;
 }
 
+.submitButton {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 
 .button {
-    margin: 10px;
-    float:right;
+    display: block;
+    margin: 15px;
     background-color: #4BABE1;
     height: 40px;
     width: 120px;
@@ -64,6 +68,24 @@
 .locationDetails {
     display: flex;
     flex-direction: column;
+}
+
+@media only screen and (max-device-width: 400px){
+    
+
+
+    .submitButton {
+        justify-content: center;
+    }
+
+    .title, .location{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
 }
 
 

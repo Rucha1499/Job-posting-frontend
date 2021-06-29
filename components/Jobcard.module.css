@@ -1,9 +1,9 @@
 .mainContainer {
+    width: 95%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100%;
 }
 
 .title {
@@ -17,10 +17,12 @@
 }
 
 .date {
+    display: flex;
+    justify-content: center;
     align-items: center;
     padding:5px 20px;
     margin:10px;
-    width: 30%;
+    width: 200px;
     font-family:sans-serif;
     font-size: large;
     color: #090540;
@@ -30,7 +32,7 @@
     align-items: center;
     padding:5px 20px;
     margin:10px;
-    width:10%;
+    width:140px;
     font-family:sans-serif;
     font-size: medium;
     color: #090540;
@@ -38,3 +40,40 @@
     background-color: white;
     cursor: pointer;
 }
+
+.button:hover {
+    background-color: #dcecf5;
+    border-radius: 5px;
+}
+
+@media only screen and (max-device-width: 600px){
+    
+    .mainContainer {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        background-color:#dcecf5;
+        border-radius: 5px;
+        margin: 10px;
+    }
+
+    .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+    }
+
+    .title, .data, .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+

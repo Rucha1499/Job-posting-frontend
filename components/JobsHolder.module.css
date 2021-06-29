@@ -1,11 +1,25 @@
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.jobs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
 .jobContainer {
     display: flex;
     flex-direction: column;
-    width:60%;
-    margin:10% 20%;
+    width: 60%;
     height: auto;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 100px 0;
 }
 
 .button {
@@ -19,4 +33,21 @@
     cursor: pointer;
 }
 
+@media only screen and (max-device-width: 800px){
+    .jobContainer {
+        width: 75%;
+    }
 
+    .button {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-device-width: 500px){
+    .jobContainer {
+        width: 80%;
+        margin: 50px 0;
+    }
+}
