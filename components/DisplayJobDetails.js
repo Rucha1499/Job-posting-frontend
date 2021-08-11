@@ -41,9 +41,11 @@ const DisplayJobDetails = ({
     <p className={styles.mode}>
       Available modes :
       {' '}
-      {fullTime && 'Full-time'}
-      {semiFullTime && 'Semi Full-time'}
-      {partTime && 'Part-time'}
+      {fullTime && '⌚ Full-time'}
+      {' '}
+      {semiFullTime && '⌚ Semi Full-time'}
+      {' '}
+      {partTime && '⌚ Part-time'}
     </p>
     <p className={styles.startDate}>
       Start from :

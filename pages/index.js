@@ -15,7 +15,7 @@ export const getServerSideProps = async () => {
 
 const HomePage = ({ data }) => (
   <FormContextProvider>
-    <Navbar title="My Listings" notification="/notification.png" profile="/profile.png" />
+    <Navbar title="Job Posting Portal" notification="/notification.png" profile="/profile.png" />
     <div className={styles.jobsContainer}>
       {data ? <JobHolder data={data} /> : 'Loading jobs...'}
     </div>

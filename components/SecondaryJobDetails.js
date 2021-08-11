@@ -42,7 +42,7 @@ const SecondaryJobDetails = ({ toggleDetails }) => {
   };
 
   return (
-    <div>
+    <div className={styles.jobDetails}>
       <div className={styles.header}>
         <div className={styles.backArrow} role="button" tabIndex={0} onKeyDown={() => toggleDetails((prevState) => !prevState)} onClick={() => toggleDetails((prevState) => !prevState)}>
           <Image
@@ -52,7 +52,7 @@ const SecondaryJobDetails = ({ toggleDetails }) => {
             width={15}
           />
         </div>
-        <p className={styles.title}># Intern Details</p>
+        <p className={styles.title}>Job Details</p>
       </div>
       <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
         <div className={styles.skills}>

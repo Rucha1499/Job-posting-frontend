@@ -34,7 +34,7 @@ const JobDetails = (data) => {
 
   return (
     <div>
-      <Navbar title="My Listings" notification="/notification.png" profile="/profile.png" />
+      <Navbar title="Job Posting Portal" notification="/notification.png" profile="/profile.png" />
       <DisplayJobDetails
         jobTitle={jobTitle}
         jobLocation={jobLocation}
