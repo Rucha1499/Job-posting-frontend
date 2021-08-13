@@ -15,9 +15,6 @@ const PrimaryJobDetails = () => {
 
   const addToFormContext = () => {
     const currentFormData = { jobTitle, jobLocation, isRemote };
-    if (!currentFormData.jobLocation) {
-      delete currentFormData.jobLocation;
-    }
     dispatch({ type: 'UPDATE', payload: currentFormData });
   };
 

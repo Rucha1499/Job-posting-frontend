@@ -35,9 +35,7 @@ const SecondaryJobDetails = ({ toggleDetails }) => {
 
   const onSubmit = (data) => {
     dispatch({ type: 'UPDATE', payload: data });
-
     const body = { ...formState, ...data };
-
     createJob(body);
   };
 
